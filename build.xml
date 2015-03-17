@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project name="org.pathvisio.atlasplugin" default="jar" basedir=".">
+
+  	<property name="pathvisio.dir" value="../.."/>
+
+	<!-- embedded jars are embedded in the resulting bundle -->
+	<path id="embed.jars">
+		<!-- None -->
+	</path>
+
+  	<path id="project.class.path">
+		<fileset dir="${pathvisio.dir}/modules">
+			<include name="org.pathvisio.core.jar"/>
+			<include name="org.pathvisio.gui.jar"/>
+			<include name="org.pathvisio.desktop.jar"/>
+			<include name="org.pathvisio.gexplugin.jar"/>
+			<include name="org.pathvisio.data.jar"/>
+			<include name="org.pathvisio.visualization.jar"/>
+		</fileset>
+		<fileset dir="${pathvisio.dir}/lib">
+			<include name="felix.jar"/>
+			<include name="org.pathvisio.jgoodies.forms.jar"/>
+			<include name="org.bridgedb.jar"/>
+			<include name="org.bridgedb.gui.jar"/>
+			<include name="org.bridgedb.rdb.jar"/>
+			<include name="org.bridgedb.rdb.construct.jar"/>
+			<include name="org.bridgedb.bio.jar"/>
+		</fileset>
+ 	 </path>
+  
+  	<import file="${pathvisio.dir}/plugin-common.xml" />
+</project>
